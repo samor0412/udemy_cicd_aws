@@ -1,0 +1,32 @@
+update travis typo and add secure key
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Ka Long Or <samor412@Kas-MacBook-Air.local>
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   .travis.yml
+#
+# ------------------------ >8 ------------------------
+# Do not modify or remove the line above.
+# Everything below it will be ignored.
+diff --git a/.travis.yml b/.travis.yml
+index 4b71442..dd30129 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -18,8 +18,10 @@ deploy:
+   bucket_path: "udemy-docker-react"
+   on:
+     branch: main
+-  access_key_id: "$AWS_ACCESS_EKY"
+-  secret_access_key: "$AWS_SECRET_EKY"
++  access_key_id: 
++    secure: "$AWS_ACCESS_KEY"
++  secret_access_key:
++    secure: "$AWS_SECRET_KEY"
+ 
+ language: generic  
+ 
